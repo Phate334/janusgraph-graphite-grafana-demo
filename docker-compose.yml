@@ -52,16 +52,6 @@ services:
     networks:
       - jce-network
 
-  dashboard:
-    image: opensearchproject/opensearch-dashboards:1.2.0
-    container_name: opensearch-dashboards
-    ports:
-      - 5601:5601
-    environment:
-      OPENSEARCH_HOSTS: '["https://elasticsearch:9200"]'
-    networks:
-      - jce-network
-
 networks:
   jce-network:
 
